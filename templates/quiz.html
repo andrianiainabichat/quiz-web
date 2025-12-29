@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master - Quiz en cours</title>
+    <link rel="manifest" href="/static/manifest.json">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-brain me-2"></i>Quiz Master
+            </a>
+            <button class="btn btn-outline-light btn-sm" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Game Stats Bar -->
+    <div class="game-stats-bar">
+        <div class="container">
+            <div class="row text-center g-3">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <i class="fas fa-star text-warning"></i>
+                        <span id="scoreDisplay">0</span>
+                        <small>Score</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <span id="correctDisplay">0</span>
+                        <small>Bonnes réponses</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <i class="fas fa-fire text-danger"></i>
+                        <span id="streakDisplay">0</span>
+                        <small>Série</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <i class="fas fa-heart text-danger"></i>
+                        <div class="lives-container" id="livesDisplay">
+                            <span class="life-heart">❤️</span>
+                            <span class="life-heart">❤️</span>
+                            <span class="life-heart">❤️</span>
+                        </div>
+                        <small>Vies</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="container mt-3">
+        <div class="progress-container">
+            <div class="progress">
+                <div class="progress-bar bg-success" id="progressBar" role="progressbar" style="width: 0%"></div>
+            </div>
+            <div class="question-counter text-center mt-2">
+                Question <span id="currentQuestion">1</span> / <span id="totalQuestions">40</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Quiz Container -->
+    <div class="container my-4">
+        <div class="quiz-container">
+            <!-- Question Card -->
+            <div class="card shadow-lg question-card" id="questionCard">
+                <div class="card-body p-4">
+                    <!-- Timer -->
+                    <div class="timer-container mb-4">
+                        <svg class="timer-svg">
+                            <circle class="timer-bg" cx="60" cy="60" r="45"></circle>
+                            <circle class="timer-progress" id="timerCircle" cx="60" cy="60" r="45"></circle>
+                        </svg>
+                        <div class="timer-text" id="timerText">30</div>
+                    </div>
+
+                    <!-- Difficulty Badge -->
+                    <div class="question-difficulty mb-3" id="difficultyBadge">
+                        <span class="badge bg-primary">Facile</span>
+                    </div>
+
+                    <!-- Question Text -->
+                    <h3 class="question-text mb-4" id="questionText">
+                        Chargement de la question...
+                    </h3>
+
+                    <!-- Choices -->
+                    <div class="choices-container" id="choicesContainer">
+                        <!-- Les choix seront générés dynamiquement -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explanation Card (cachée par défaut) -->
+            <div class="card shadow-lg explanation-card" id="explanationCard" style="display: none;">
+                <div class="card-body p-4">
+                    <div class="result-icon mb-3" id="resultIcon">
+                        <i class="fas fa-check-circle text-success"></i>
+                    </div>
+                    
+                    <h4 id="resultTitle" class="mb-3">
+                        <span class="text-success">Bonne réponse !</span>
+                    </h4>
+
+                    <div class="explanation-text mb-3" id="explanationText">
+                        Explication de la réponse...
+                    </div>
+
+                    <div class="points-earned" id="pointsEarned">
+                        <i class="fas fa-star text-warning"></i> +150 points
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary btn-lg px-5" id="nextBtn">
+                            Question suivante <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal fade" id="gameOverModal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div style="font-size: 5rem;" id="gameOverIcon">🎉</div>
+                    <h2 class="mb-4" id="gameOverTitle">Félicitations !</h2>
+                    
+                    <div class="final-stats mb-4">
+                        <div class="stat-row">
+                            <span>Score Final</span>
+                            <strong id="finalScore">0</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Bonnes Réponses</span>
+                            <strong id="finalCorrect">0/0</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Meilleure Série</span>
+                            <strong id="finalStreak">0</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Temps Moyen</span>
+                            <strong><span id="avgTime">0</span>s</strong>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success btn-lg" id="restartBtn">
+                            <i class="fas fa-redo me-2"></i>Rejouer
+                        </button>
+                        <button class="btn btn-primary" id="shareBtn">
+                            <i class="fas fa-share-alt me-2"></i>Partager
+                        </button>
+                        <a href="/" class="btn btn-outline-secondary">
+                            <i class="fas fa-home me-2"></i>Accueil
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Sound Effects -->
+    <audio id="correctSound" src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjiR1/LMeSwFJHfH8N2QQAo="></audio>
+    <audio id="wrongSound" src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAoUXrTp66hVFApGn+DyvmwhBDiM0+zJfC0GKn/N8N2QQAo="></audio>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/quiz.js"></script>
+</body>
+</html>

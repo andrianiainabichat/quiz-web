@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master - Classement</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-brain me-2"></i>Quiz Master
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-home me-1"></i>Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/scores"><i class="fas fa-trophy me-1"></i>Scores</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center py-4">
+            <h1 class="display-5 fw-bold mb-2">
+                <i class="fas fa-trophy text-warning"></i> Classement
+            </h1>
+            <p class="lead mb-0">Les meilleurs joueurs de Quiz Master</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="btn-group mb-3" role="group">
+                    <button class="btn btn-outline-primary active" onclick="filterByCategory('all')">Tous</button>
+                    <button class="btn btn-outline-primary" onclick="filterByCategory('maths')">Maths</button>
+                    <button class="btn btn-outline-primary" onclick="filterByCategory('geo_madagascar')">Madagascar</button>
+                    <button class="btn btn-outline-primary" onclick="filterByCategory('geo_afrique')">Afrique</button>
+                    <button class="btn btn-outline-primary" onclick="filterByCategory('culture_generale')">Culture G</button>
+                    <button class="btn btn-outline-primary" onclick="filterByCategory('python')">Python</button>
+                </div>
+                <button class="btn btn-danger btn-sm float-end" onclick="clearScores()">
+                    <i class="fas fa-trash me-1"></i>Réinitialiser
+                </button>
+                <button class="btn btn-success btn-sm float-end me-2" onclick="exportScores()">
+                    <i class="fas fa-download me-1"></i>Exporter CSV
+                </button>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Top 10 Scores -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">
+                            <i class="fas fa-medal text-warning me-2"></i>Top 10
+                        </h4>
+                        <div id="topScoresList">
+                            <!-- Les scores seront chargés ici -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistiques -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">
+                            <i class="fas fa-chart-bar text-primary me-2"></i>Statistiques globales
+                        </h4>
+                        <div class="row text-center g-3">
+                            <div class="col-6">
+                                <div class="stat-box">
+                                    <h3 class="text-primary" id="totalGames">0</h3>
+                                    <small class="text-muted">Parties jouées</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-box">
+                                    <h3 class="text-success" id="avgScore">0</h3>
+                                    <small class="text-muted">Score moyen</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-box">
+                                    <h3 class="text-warning" id="bestStreak">0</h3>
+                                    <small class="text-muted">Meilleure série</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-box">
+                                    <h3 class="text-info" id="avgAccuracy">0%</h3>
+                                    <small class="text-muted">Précision moyenne</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphique -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">
+                            <i class="fas fa-chart-line text-success me-2"></i>Progression des scores
+                        </h5>
+                        <canvas id="scoresChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graphique par catégorie -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">
+                            <i class="fas fa-chart-pie text-danger me-2"></i>Scores par catégorie
+                        </h4>
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">
+                <i class="fas fa-code me-2"></i>Quiz Master © 2024
+            </p>
+            <p class="small text-muted">
+                Développé avec <i class="fas fa-heart text-danger"></i> en Python Flask
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/scores.js"></script>
+</body>
+</html>

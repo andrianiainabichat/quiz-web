@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master - Multijoueur</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-brain me-2"></i>Quiz Master
+            </a>
+            <button class="btn btn-outline-light btn-sm" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center py-4">
+            <h1 class="display-5 fw-bold mb-2">
+                <i class="fas fa-users text-warning"></i> Mode Multijoueur
+            </h1>
+            <p class="lead mb-0">Affrontez vos amis en temps réel !</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <!-- Écran de sélection -->
+        <div id="menuScreen">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <!-- Nom du joueur -->
+                    <div class="card shadow-sm mb-4 animate-slide-up">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-3">
+                                <i class="fas fa-user-circle me-2"></i>Votre profil
+                            </h4>
+                            <div class="row g-3">
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control form-control-lg" id="playerNameInput" 
+                                           placeholder="Entrez votre nom" maxlength="20">
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-select form-select-lg" id="avatarSelect">
+                                        <option value="😀">😀</option>
+                                        <option value="😎">😎</option>
+                                        <option value="🤓">🤓</option>
+                                        <option value="🥳">🥳</option>
+                                        <option value="🤩">🤩</option>
+                                        <option value="😈">😈</option>
+                                        <option value="🤖">🤖</option>
+                                        <option value="👽">👽</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Options de jeu -->
+                    <div class="card shadow-sm mb-4 animate-slide-up-delay">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-3">
+                                <i class="fas fa-cog me-2"></i>Créer une partie
+                            </h4>
+                            <div class="mb-3">
+                                <label class="form-label">Catégorie</label>
+                                <select class="form-select" id="categorySelect">
+                                    <option value="maths">🔢 Mathématiques</option>
+                                    <option value="geo_madagascar">🇲🇬 Géo Madagascar</option>
+                                    <option value="geo_afrique">🌍 Géo Afrique</option>
+                                    <option value="culture_generale">📚 Culture Générale</option>
+                                    <option value="python">🐍 Python</option>
+                                </select>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Nombre de questions</label>
+                                    <select class="form-select" id="questionsCountSelect">
+                                        <option value="10">10 questions</option>
+                                        <option value="20" selected>20 questions</option>
+                                        <option value="30">30 questions</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Joueurs max</label>
+                                    <select class="form-select" id="maxPlayersSelect">
+                                        <option value="2">2 joueurs</option>
+                                        <option value="4" selected>4 joueurs</option>
+                                        <option value="6">6 joueurs</option>
+                                        <option value="8">8 joueurs</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn btn-success btn-lg w-100" id="createRoomBtn">
+                                <i class="fas fa-plus-circle me-2"></i>Créer une salle
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Rejoindre une salle -->
+                    <div class="card shadow-sm animate-slide-up-delay-2">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-3">
+                                <i class="fas fa-door-open me-2"></i>Rejoindre une partie
+                            </h4>
+                            <div class="input-group input-group-lg mb-3">
+                                <input type="text" class="form-control" id="roomCodeInput" 
+                                       placeholder="Code de la salle (ex: ABC123)" maxlength="6">
+                                <button class="btn btn-primary" id="joinRoomBtn">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Rejoindre
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Écran de salle d'attente -->
+        <div id="lobbyScreen" style="display: none;">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Info salle -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h3 class="mb-1">Salle: <span class="text-primary" id="roomCodeDisplay"></span></h3>
+                                    <p class="text-muted mb-0">En attente des joueurs...</p>
+                                </div>
+                                <button class="btn btn-danger" id="leaveRoomBtn">
+                                    <i class="fas fa-sign-out-alt me-2"></i>Quitter
+                                </button>
+                            </div>
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i>
+                                <span id="lobbyInfo">Partagez le code de la salle avec vos amis !</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Liste des joueurs -->
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">
+                                <i class="fas fa-users me-2"></i>Joueurs (<span id="playersCount">0</span>/<span id="maxPlayers">4</span>)
+                            </h4>
+                            <div id="playersList" class="row g-3">
+                                <!-- Les joueurs seront affichés ici -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Boutons d'action -->
+                    <div class="mt-4 text-center">
+                        <button class="btn btn-warning btn-lg me-2" id="readyBtn">
+                            <i class="fas fa-check me-2"></i>Prêt !
+                        </button>
+                        <button class="btn btn-success btn-lg" id="startGameBtn" style="display: none;">
+                            <i class="fas fa-play me-2"></i>Démarrer la partie
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chat -->
+                <div class="col-lg-4">
+                    <div class="card shadow-sm" style="height: 600px;">
+                        <div class="card-header bg-primary text-white">
+                            <i class="fas fa-comments me-2"></i>Chat
+                        </div>
+                        <div class="card-body p-2" id="chatMessages" style="height: 490px; overflow-y: auto;">
+                            <!-- Messages du chat -->
+                        </div>
+                        <div class="card-footer">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="chatInput" 
+                                       placeholder="Votre message..." maxlength="100">
+                                <button class="btn btn-primary" id="sendChatBtn">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Écran de jeu -->
+        <div id="gameScreen" style="display: none;">
+            <!-- Tableau des scores -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body p-3">
+                    <div class="row g-3" id="gameScoreboard">
+                        <!-- Scores des joueurs -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question actuelle -->
+            <div class="card shadow-lg">
+                <div class="card-body p-4">
+                    <!-- Progression -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Question <span id="currentQuestionNum">1</span>/<span id="totalQuestionsNum">20</span></span>
+                            <span class="badge bg-primary" id="gameTimer">30s</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar" id="gameProgress" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Question -->
+                    <h3 class="question-text mb-4" id="gameQuestionText">
+                        Chargement de la question...
+                    </h3>
+
+                    <!-- Choix -->
+                    <div class="choices-container" id="gameChoices">
+                        <!-- Les choix seront générés ici -->
+                    </div>
+
+                    <!-- Statut des réponses -->
+                    <div class="mt-3 text-center">
+                        <small class="text-muted">
+                            <i class="fas fa-hourglass-half me-1"></i>
+                            <span id="answeredCount">0</span>/<span id="totalPlayersCount">0</span> joueurs ont répondu
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Écran de résultats -->
+        <div id="resultsScreen" style="display: none;">
+            <div class="card shadow-lg">
+                <div class="card-body p-5 text-center">
+                    <div style="font-size: 5rem;" id="resultsIcon">🏆</div>
+                    <h2 class="mb-4">Partie terminée !</h2>
+
+                    <!-- Podium -->
+                    <div id="podium" class="row g-3 mb-4">
+                        <!-- Le podium sera généré ici -->
+                    </div>
+
+                    <!-- Classement complet -->
+                    <div class="text-start mb-4">
+                        <h4>Classement final</h4>
+                        <div id="finalRanking">
+                            <!-- Le classement sera généré ici -->
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success btn-lg" id="playAgainBtn">
+                            <i class="fas fa-redo me-2"></i>Rejouer
+                        </button>
+                        <a href="/" class="btn btn-outline-secondary">
+                            <i class="fas fa-home me-2"></i>Retour à l'accueil
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas Confetti -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="/static/js/multiplayer.js"></script>
+</body>
+</html>

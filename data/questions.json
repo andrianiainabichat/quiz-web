@@ -1,0 +1,1612 @@
+{
+    "maths": [
+      {
+        "id": 1,
+        "question": "Quelle est la racine carrée de 144 ?",
+        "choices": ["10", "12", "14", "16"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "√144 = 12 car 12 × 12 = 144"
+      },
+      {
+        "id": 2,
+        "question": "Combien font 15% de 200 ?",
+        "choices": ["20", "25", "30", "35"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "200 × 0,15 = 30"
+      },
+      {
+        "id": 3,
+        "question": "Quel est le résultat de 7 × 8 ?",
+        "choices": ["54", "56", "58", "60"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "7 × 8 = 56"
+      },
+      {
+        "id": 4,
+        "question": "Combien de côtés a un hexagone ?",
+        "choices": ["5", "6", "7", "8"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Un hexagone a 6 côtés"
+      },
+      {
+        "id": 5,
+        "question": "Quel est le périmètre d'un carré de côté 5 cm ?",
+        "choices": ["15 cm", "20 cm", "25 cm", "30 cm"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Périmètre = 4 × côté = 4 × 5 = 20 cm"
+      },
+      {
+        "id": 6,
+        "question": "Combien font 2³ (2 puissance 3) ?",
+        "choices": ["6", "8", "9", "12"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "2³ = 2 × 2 × 2 = 8"
+      },
+      {
+        "id": 7,
+        "question": "Quelle est la valeur de π (pi) arrondie ?",
+        "choices": ["3,12", "3,14", "3,16", "3,18"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "π ≈ 3,14159..."
+      },
+      {
+        "id": 8,
+        "question": "Combien font 24 ÷ 6 ?",
+        "choices": ["3", "4", "5", "6"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "24 ÷ 6 = 4"
+      },
+      {
+        "id": 9,
+        "question": "Quelle est l'aire d'un rectangle de 8 cm × 5 cm ?",
+        "choices": ["30 cm²", "35 cm²", "40 cm²", "45 cm²"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Aire = longueur × largeur = 8 × 5 = 40 cm²"
+      },
+      {
+        "id": 10,
+        "question": "Combien font 100 - 37 ?",
+        "choices": ["61", "62", "63", "64"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "100 - 37 = 63"
+      },
+      {
+        "id": 11,
+        "question": "Quel nombre est premier ?",
+        "choices": ["15", "17", "21", "25"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "17 est premier (divisible seulement par 1 et 17)"
+      },
+      {
+        "id": 12,
+        "question": "Quelle est la somme des angles d'un triangle ?",
+        "choices": ["90°", "180°", "270°", "360°"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "La somme des angles d'un triangle est toujours 180°"
+      },
+      {
+        "id": 13,
+        "question": "Combien font 5² + 3² ?",
+        "choices": ["32", "34", "36", "38"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "5² + 3² = 25 + 9 = 34"
+      },
+      {
+        "id": 14,
+        "question": "Quelle fraction est égale à 0,5 ?",
+        "choices": ["1/3", "1/2", "2/3", "3/4"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "1/2 = 0,5"
+      },
+      {
+        "id": 15,
+        "question": "Combien de minutes dans 2,5 heures ?",
+        "choices": ["120", "130", "140", "150"],
+        "correct": 3,
+        "difficulty": 2,
+        "explanation": "2,5 heures = 2h30 = 150 minutes"
+      },
+      {
+        "id": 16,
+        "question": "Quel est le résultat de 12 × 12 ?",
+        "choices": ["124", "134", "144", "154"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "12 × 12 = 144"
+      },
+      {
+        "id": 17,
+        "question": "Quelle est la médiane de : 3, 7, 9, 12, 15 ?",
+        "choices": ["7", "9", "10", "12"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "La médiane est la valeur centrale : 9"
+      },
+      {
+        "id": 18,
+        "question": "Combien font 3/4 de 80 ?",
+        "choices": ["55", "60", "65", "70"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "80 × 3/4 = 80 × 0,75 = 60"
+      },
+      {
+        "id": 19,
+        "question": "Quelle est la valeur absolue de -15 ?",
+        "choices": ["-15", "0", "15", "30"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "|-15| = 15"
+      },
+      {
+        "id": 20,
+        "question": "Combien de degrés dans un angle droit ?",
+        "choices": ["45°", "60°", "90°", "180°"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Un angle droit mesure 90°"
+      },
+      {
+        "id": 21,
+        "question": "Quel est le PGCD de 24 et 36 ?",
+        "choices": ["6", "8", "12", "18"],
+        "correct": 2,
+        "difficulty": 3,
+        "explanation": "Le Plus Grand Commun Diviseur de 24 et 36 est 12"
+      },
+      {
+        "id": 22,
+        "question": "Combien de diagonales a un pentagone ?",
+        "choices": ["3", "5", "7", "10"],
+        "correct": 1,
+        "difficulty": 3,
+        "explanation": "Un pentagone a 5 diagonales"
+      },
+      {
+        "id": 23,
+        "question": "Quel est le volume d'un cube d'arête 3 cm ?",
+        "choices": ["9 cm³", "18 cm³", "27 cm³", "36 cm³"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Volume = arête³ = 3³ = 27 cm³"
+      },
+      {
+        "id": 24,
+        "question": "Si x + 5 = 12, quelle est la valeur de x ?",
+        "choices": ["5", "6", "7", "8"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "x = 12 - 5 = 7"
+      },
+      {
+        "id": 25,
+        "question": "Combien font 20% de 150 ?",
+        "choices": ["25", "30", "35", "40"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "150 × 0,20 = 30"
+      },
+      {
+        "id": 26,
+        "question": "Quelle est la circonférence d'un cercle de rayon 5 cm ? (π ≈ 3,14)",
+        "choices": ["25,7 cm", "28,5 cm", "31,4 cm", "34,2 cm"],
+        "correct": 2,
+        "difficulty": 3,
+        "explanation": "Circonférence = 2πr = 2 × 3,14 × 5 = 31,4 cm"
+      },
+      {
+        "id": 27,
+        "question": "Combien font 2 × 3 × 5 × 7 ?",
+        "choices": ["180", "200", "210", "240"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "2 × 3 × 5 × 7 = 210"
+      },
+      {
+        "id": 28,
+        "question": "Quelle est la moyenne de 10, 15, 20 et 25 ?",
+        "choices": ["15", "17,5", "18", "20"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Moyenne = (10+15+20+25)/4 = 70/4 = 17,5"
+      },
+      {
+        "id": 29,
+        "question": "Combien de faces a un cube ?",
+        "choices": ["4", "5", "6", "8"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Un cube a 6 faces"
+      },
+      {
+        "id": 30,
+        "question": "Quel est le résultat de √81 ?",
+        "choices": ["7", "8", "9", "10"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "√81 = 9 car 9 × 9 = 81"
+      },
+      {
+        "id": 31,
+        "question": "Combien font (-3) × (-4) ?",
+        "choices": ["-12", "-7", "7", "12"],
+        "correct": 3,
+        "difficulty": 2,
+        "explanation": "Le produit de deux nombres négatifs est positif : (-3) × (-4) = 12"
+      },
+      {
+        "id": 32,
+        "question": "Quel est le nombre suivant dans la suite : 2, 4, 8, 16, ... ?",
+        "choices": ["24", "28", "32", "36"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Chaque nombre est multiplié par 2 : 16 × 2 = 32"
+      },
+      {
+        "id": 33,
+        "question": "Combien font 999 + 1 ?",
+        "choices": ["100", "999", "1000", "10000"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "999 + 1 = 1000"
+      },
+      {
+        "id": 34,
+        "question": "Quelle est l'aire d'un triangle de base 10 cm et hauteur 6 cm ?",
+        "choices": ["25 cm²", "30 cm²", "35 cm²", "40 cm²"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Aire = (base × hauteur)/2 = (10 × 6)/2 = 30 cm²"
+      },
+      {
+        "id": 35,
+        "question": "Combien de zéros dans un million ?",
+        "choices": ["4", "5", "6", "7"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Un million = 1 000 000 (6 zéros)"
+      },
+      {
+        "id": 36,
+        "question": "Si 3x = 21, quelle est la valeur de x ?",
+        "choices": ["5", "6", "7", "8"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "x = 21/3 = 7"
+      },
+      {
+        "id": 37,
+        "question": "Quel est le double de 125 ?",
+        "choices": ["225", "250", "275", "300"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "125 × 2 = 250"
+      },
+      {
+        "id": 38,
+        "question": "Combien font 10! (factorielle 10) divisé par 9! ?",
+        "choices": ["9", "10", "90", "100"],
+        "correct": 1,
+        "difficulty": 3,
+        "explanation": "10!/9! = 10 × 9!/9! = 10"
+      },
+      {
+        "id": 39,
+        "question": "Quelle est la somme des 5 premiers nombres impairs ?",
+        "choices": ["15", "20", "25", "30"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "1 + 3 + 5 + 7 + 9 = 25"
+      },
+      {
+        "id": 40,
+        "question": "Combien font 0,75 × 80 ?",
+        "choices": ["50", "55", "60", "65"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "0,75 × 80 = 60"
+      }
+    ],
+    "geo_madagascar": [
+      {
+        "id": 41,
+        "question": "Quelle est la capitale de Madagascar ?",
+        "choices": ["Toamasina", "Antananarivo", "Mahajanga", "Fianarantsoa"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Antananarivo (ou Tana) est la capitale de Madagascar"
+      },
+      {
+        "id": 42,
+        "question": "Quel océan borde Madagascar ?",
+        "choices": ["Océan Atlantique", "Océan Arctique", "Océan Indien", "Océan Pacifique"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Madagascar est bordée par l'Océan Indien"
+      },
+      {
+        "id": 43,
+        "question": "Quelle est la monnaie de Madagascar ?",
+        "choices": ["Franc CFA", "Ariary", "Shilling", "Rand"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "L'Ariary (MGA) est la monnaie malgache"
+      },
+      {
+        "id": 44,
+        "question": "Quel animal emblématique vit uniquement à Madagascar ?",
+        "choices": ["Koala", "Lémurien", "Kangourou", "Panda"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Les lémuriens sont endémiques à Madagascar"
+      },
+      {
+        "id": 45,
+        "question": "Quelle est la plus grande ville portuaire de Madagascar ?",
+        "choices": ["Toamasina", "Antananarivo", "Antsirabe", "Toliara"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "Toamasina (Tamatave) est le principal port de Madagascar"
+      },
+      {
+        "id": 46,
+        "question": "Dans quelle région se trouve le parc national d'Andasibe ?",
+        "choices": ["Nord", "Sud", "Est", "Ouest"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Andasibe se trouve à l'est de Madagascar"
+      },
+      {
+        "id": 47,
+        "question": "Quelle est la langue officielle avec le malgache ?",
+        "choices": ["Anglais", "Français", "Espagnol", "Portugais"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Le français et le malgache sont les langues officielles"
+      },
+      {
+        "id": 48,
+        "question": "Quel est le plat national malgache ?",
+        "choices": ["Couscous", "Romazava", "Paella", "Curry"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Le Romazava est le plat national de Madagascar"
+      },
+      {
+        "id": 49,
+        "question": "Quelle allée célèbre se trouve à Madagascar ?",
+        "choices": ["Allée des Baobabs", "Allée des Palmiers", "Allée des Cèdres", "Allée des Séquoias"],
+        "correct": 0,
+        "difficulty": 1,
+        "explanation": "L'Allée des Baobabs est un site touristique emblématique"
+      },
+      {
+        "id": 50,
+        "question": "Quel pays colonisa Madagascar jusqu'en 1960 ?",
+        "choices": ["Angleterre", "Portugal", "France", "Belgique"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Madagascar était une colonie française jusqu'en 1960"
+      },
+      {
+        "id": 51,
+        "question": "Quelle ville est connue pour ses sources thermales ?",
+        "choices": ["Antsirabe", "Toliara", "Mahajanga", "Fort-Dauphin"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "Antsirabe est célèbre pour ses eaux thermales"
+      },
+      {
+        "id": 52,
+        "question": "Quel massif montagneux traverse Madagascar du nord au sud ?",
+        "choices": ["Les Alpes", "Les Hautes Terres", "Le Kilimandjaro", "L'Atlas"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Les Hautes Terres centrales traversent l'île"
+      },
+      {
+        "id": 53,
+        "question": "Quelle île appartient à Madagascar ?",
+        "choices": ["La Réunion", "Nosy Be", "Maurice", "Mayotte"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Nosy Be est une île touristique malgache"
+      },
+      {
+        "id": 54,
+        "question": "Combien de provinces compte Madagascar ?",
+        "choices": ["4", "6", "8", "10"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Madagascar a 6 provinces administratives"
+      },
+      {
+        "id": 55,
+        "question": "Quelle est la superficie approximative de Madagascar ?",
+        "choices": ["287 000 km²", "387 000 km²", "487 000 km²", "587 000 km²"],
+        "correct": 3,
+        "difficulty": 3,
+        "explanation": "Madagascar fait environ 587 000 km²"
+      },
+      {
+        "id": 56,
+        "question": "Quel détroit sépare Madagascar de l'Afrique ?",
+        "choices": ["Détroit de Gibraltar", "Canal de Mozambique", "Détroit de Béring", "Détroit de Malacca"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Le Canal de Mozambique sépare Madagascar de l'Afrique"
+      },
+      {
+        "id": 57,
+        "question": "Quel est le point culminant de Madagascar ?",
+        "choices": ["Maromokotro", "Tsaratanana", "Ankaratra", "Andringitra"],
+        "correct": 0,
+        "difficulty": 3,
+        "explanation": "Le Maromokotro (2876 m) est le plus haut sommet"
+      },
+      {
+        "id": 58,
+        "question": "Quelle reine a unifié Madagascar au 19ème siècle ?",
+        "choices": ["Ranavalona I", "Cléopâtre", "Victoria", "Élisabeth"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "La Reine Ranavalona I a régné sur Madagascar"
+      },
+      {
+        "id": 59,
+        "question": "Quel parc national abrite les tsingy ?",
+        "choices": ["Isalo", "Bemaraha", "Ankarafantsika", "Ranomafana"],
+        "correct": 1,
+        "difficulty": 3,
+        "explanation": "Le parc de Bemaraha est célèbre pour ses tsingy"
+      },
+      {
+        "id": 60,
+        "question": "Quelle est la population approximative de Madagascar ?",
+        "choices": ["18 millions", "28 millions", "38 millions", "48 millions"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Madagascar compte environ 28 millions d'habitants"
+      },
+      {
+        "id": 61,
+        "question": "Quel fruit tropical est largement cultivé à Madagascar ?",
+        "choices": ["Pomme", "Litchi", "Cerise", "Poire"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Le litchi est une culture importante à Madagascar"
+      },
+      {
+        "id": 62,
+        "question": "Quelle pierre précieuse est extraite à Madagascar ?",
+        "choices": ["Émeraude", "Saphir", "Rubis", "Toutes ces réponses"],
+        "correct": 3,
+        "difficulty": 2,
+        "explanation": "Madagascar est riche en pierres précieuses variées"
+      },
+      {
+        "id": 63,
+        "question": "Quel instrument traditionnel malgache est célèbre ?",
+        "choices": ["Guitare", "Valiha", "Piano", "Violon"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Le valiha est l'instrument traditionnel malgache"
+      },
+      {
+        "id": 64,
+        "question": "Dans quelle hémisphère se trouve Madagascar ?",
+        "choices": ["Nord", "Sud", "Est", "Ouest"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Madagascar est dans l'hémisphère sud"
+      },
+      {
+        "id": 65,
+        "question": "Quelle épice est cultivée à Nosy Be ?",
+        "choices": ["Safran", "Vanille", "Curcuma", "Cardamome"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Nosy Be est appelée 'l'île aux parfums' pour sa vanille"
+      },
+      {
+        "id": 66,
+        "question": "Quel climat domine le sud de Madagascar ?",
+        "choices": ["Tropical humide", "Désertique", "Semi-aride", "Polaire"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Le sud a un climat semi-aride"
+      },
+      {
+        "id": 67,
+        "question": "Quelle ville est surnommée la 'ville du soleil' ?",
+        "choices": ["Antananarivo", "Toliara", "Fianarantsoa", "Mahajanga"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Toliara (Tuléar) est appelée la 'ville du soleil'"
+      },
+      {
+        "id": 68,
+        "question": "Quel festival traditionnel célèbre le retournement des morts ?",
+        "choices": ["Santabary", "Famadihana", "Alahamady", "Sambatra"],
+        "correct": 1,
+        "difficulty": 3,
+        "explanation": "Le Famadihana est la cérémonie du retournement des morts"
+      },
+      {
+        "id": 69,
+        "question": "Quelle forêt est célèbre pour ses lémuriens Indri ?",
+        "choices": ["Andasibe", "Kirindy", "Zombitse", "Ankarana"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "Andasibe abrite les lémuriens Indri indri"
+      },
+      {
+        "id": 70,
+        "question": "Quel pourcentage des espèces de Madagascar est endémique ?",
+        "choices": ["50%", "70%", "80%", "90%"],
+        "correct": 3,
+        "difficulty": 3,
+        "explanation": "Environ 90% des espèces sont endémiques à Madagascar"
+      },
+      {
+        "id": 71,
+        "question": "Quelle est la saison des pluies à Madagascar ?",
+        "choices": ["Juin-Août", "Septembre-Novembre", "Décembre-Mars", "Avril-Mai"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "La saison des pluies va de décembre à mars"
+      },
+      {
+        "id": 72,
+        "question": "Quel type de riz est principalement cultivé ?",
+        "choices": ["Riz basmati", "Riz rouge", "Riz paddy", "Riz sauvage"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Le riz paddy (vary) est la culture de base"
+      },
+      {
+        "id": 73,
+        "question": "Quelle ethnie est majoritaire à Madagascar ?",
+        "choices": ["Merina", "Betsileo", "Sakalava", "Toutes partagées équitablement"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "Les Merina sont l'ethnie majoritaire des Hautes Terres"
+      },
+      {
+        "id": 74,
+        "question": "Quel sport est le plus populaire à Madagascar ?",
+        "choices": ["Cricket", "Football", "Rugby", "Basketball"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Le football est le sport le plus populaire"
+      },
+      {
+        "id": 75,
+        "question": "Quelle réserve est classée au patrimoine mondial de l'UNESCO ?",
+        "choices": ["Ankarafantsika", "Tsingy de Bemaraha", "Zombitse", "Masoala"],
+        "correct": 1,
+        "difficulty": 3,
+        "explanation": "Les Tsingy de Bemaraha sont classés UNESCO"
+      },
+      {
+        "id": 76,
+        "question": "Quel est le nom du palais royal d'Antananarivo ?",
+        "choices": ["Rova", "Ambohimanga", "Manjakamiadana", "Toutes ces réponses"],
+        "correct": 3,
+        "difficulty": 3,
+        "explanation": "Le Rova (palais royal) inclut Manjakamiadana et Ambohimanga"
+      },
+      {
+        "id": 77,
+        "question": "Quelle ville est le centre de l'artisanat malgache ?",
+        "choices": ["Antananarivo", "Ambositra", "Toamasina", "Mahajanga"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Ambositra est réputée pour son artisanat en bois"
+      },
+      {
+        "id": 78,
+        "question": "Quel caméléon endémique est le plus petit du monde ?",
+        "choices": ["Brookesia micra", "Furcifer pardalis", "Calumma parsonii", "Brookesia perarmata"],
+        "correct": 0,
+        "difficulty": 3,
+        "explanation": "Brookesia micra est le plus petit caméléon au monde"
+      },
+      {
+        "id": 79,
+        "question": "Quelle baie est célèbre pour ses baleines à bosse ?",
+        "choices": ["Baie d'Antongil", "Baie de Diego", "Baie d'Ampasindava", "Baie de Sainte-Marie"],
+        "correct": 0,
+        "difficulty": 3,
+        "explanation": "La Baie d'Antongil accueille les baleines à bosse"
+      },
+      {
+        "id": 80,
+        "question": "Quel est le nom du journal national malgache ?",
+        "choices": ["Madagascar Matin", "Midi Madagasikara", "L'Express de Madagascar", "Madagascar Tribune"],
+        "correct": 1,
+        "difficulty": 3,
+        "explanation": "Midi Madagasikara est un journal national historique"
+      }
+    ],
+    "geo_afrique": [
+      {
+        "id": 81,
+        "question": "Combien de pays compte l'Afrique ?",
+        "choices": ["44", "54", "64", "74"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "L'Afrique compte 54 pays reconnus"
+      },
+      {
+        "id": 82,
+        "question": "Quel est le plus grand pays d'Afrique par superficie ?",
+        "choices": ["Nigeria", "Algérie", "RD Congo", "Soudan"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "L'Algérie est le plus vaste pays africain"
+      },
+      {
+        "id": 83,
+        "question": "Quel est le plus long fleuve d'Afrique ?",
+        "choices": ["Niger", "Congo", "Zambèze", "Nil"],
+        "correct": 3,
+        "difficulty": 1,
+        "explanation": "Le Nil est le plus long fleuve d'Afrique (6650 km)"
+      },
+      {
+        "id": 84,
+        "question": "Quelle est la capitale de l'Égypte ?",
+        "choices": ["Alexandrie", "Le Caire", "Louxor", "Assouan"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Le Caire est la capitale égyptienne"
+      },
+      {
+        "id": 85,
+        "question": "Quel désert couvre le nord de l'Afrique ?",
+        "choices": ["Kalahari", "Namib", "Sahara", "Gobi"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Le Sahara est le plus grand désert chaud du monde"
+      },
+      {
+        "id": 86,
+        "question": "Quel pays africain n'a jamais été colonisé ?",
+        "choices": ["Kenya", "Éthiopie", "Ghana", "Sénégal"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "L'Éthiopie n'a jamais été colonisée (sauf occupation italienne brève)"
+      },
+      {
+        "id": 87,
+        "question": "Quelle est la montagne la plus haute d'Afrique ?",
+        "choices": ["Mont Kenya", "Kilimandjaro", "Mont Stanley", "Ras Dashan"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Le Kilimandjaro (5895 m) en Tanzanie"
+      },
+      {
+        "id": 88,
+        "question": "Quelle ville est surnommée 'la perle de l'Afrique' ?",
+        "choices": ["Nairobi", "Kampala", "Kigali", "Dar es Salaam"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Kampala, capitale de l'Ouganda"
+      },
+      {
+        "id": 89,
+        "question": "Dans quel pays se trouve Victoria Falls ?",
+        "choices": ["Afrique du Sud", "Zambie/Zimbabwe", "Kenya", "Tanzanie"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Les chutes Victoria sont à la frontière Zambie-Zimbabwe"
+      },
+      {
+        "id": 90,
+        "question": "Quelle est la capitale du Nigeria ?",
+        "choices": ["Lagos", "Abuja", "Kano", "Ibadan"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Abuja est la capitale fédérale du Nigeria"
+      },
+      {
+        "id": 91,
+        "question": "Quel pays africain est lusophone ?",
+        "choices": ["Sénégal", "Mozambique", "Kenya", "Ghana"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Le Mozambique parle portugais"
+      },
+      {
+        "id": 92,
+        "question": "Quelle organisation unit les pays africains ?",
+        "choices": ["ONU", "UA", "OTAN", "ASEAN"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "L'Union Africaine (UA) unit les pays du continent"
+      },
+      {
+        "id": 93,
+        "question": "Quel pays a pour capitale Dakar ?",
+        "choices": ["Mali", "Sénégal", "Côte d'Ivoire", "Bénin"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Dakar est la capitale du Sénégal"
+      },
+      {
+        "id": 94,
+        "question": "Quel lac est le plus grand d'Afrique ?",
+        "choices": ["Lac Tanganyika", "Lac Malawi", "Lac Victoria", "Lac Tchad"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Le Lac Victoria (69 000 km²) est le plus vaste"
+      },
+      {
+        "id": 95,
+        "question": "Dans quel pays se trouve le parc national du Serengeti ?",
+        "choices": ["Kenya", "Tanzanie", "Ouganda", "Botswana"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Le Serengeti est en Tanzanie"
+      },
+      {
+        "id": 96,
+        "question": "Quelle est la devise de l'Afrique du Sud ?",
+        "choices": ["Naira", "Rand", "Shilling", "Cedi"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Le Rand (ZAR) est la monnaie sud-africaine"
+      },
+      {
+        "id": 97,
+        "question": "Quel président sud-africain a lutté contre l'apartheid ?",
+        "choices": ["Desmond Tutu", "Nelson Mandela", "Thabo Mbeki", "Jacob Zuma"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Nelson Mandela a combattu l'apartheid"
+      },
+      {
+        "id": 98,
+        "question": "Quelle île africaine est célèbre pour ses lémuriens ?",
+        "choices": ["Maurice", "Seychelles", "Madagascar", "Comores"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Madagascar abrite les lémuriens"
+      },
+      {
+        "id": 99,
+        "question": "Quel détroit sépare l'Afrique de l'Europe ?",
+        "choices": ["Bosphore", "Gibraltar", "Dardanelles", "Ormuz"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Le détroit de Gibraltar sépare Afrique et Europe"
+      },
+      {
+        "id": 100,
+        "question": "Quelle ville marocaine est célèbre pour sa médina ?",
+        "choices": ["Rabat", "Casablanca", "Fès", "Tanger"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Fès possède une médina classée UNESCO"
+      },
+      {
+        "id": 101,
+        "question": "Quel pays est appelé 'la Suisse de l'Afrique' ?",
+        "choices": ["Botswana", "Rwanda", "Lesotho", "Namibie"],
+        "correct": 1,
+        "difficulty": 3,
+        "explanation": "Le Rwanda est surnommé ainsi pour sa propreté"
+      },
+      {
+        "id": 102,
+        "question": "Quelle langue est la plus parlée en Afrique ?",
+        "choices": ["Français", "Anglais", "Arabe", "Swahili"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "L'arabe est largement parlé en Afrique du Nord"
+      },
+      {
+        "id": 103,
+        "question": "Quel pays africain produit le plus de cacao ?",
+        "choices": ["Ghana", "Côte d'Ivoire", "Cameroun", "Nigeria"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "La Côte d'Ivoire est le 1er producteur mondial de cacao"
+      },
+      {
+        "id": 104,
+        "question": "Quelle est la capitale de l'Éthiopie ?",
+        "choices": ["Addis-Abeba", "Asmara", "Nairobi", "Djibouti"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "Addis-Abeba est la capitale éthiopienne"
+      },
+      {
+        "id": 105,
+        "question": "Quel canal relie la Méditerranée à la mer Rouge ?",
+        "choices": ["Canal de Panama", "Canal de Suez", "Canal de Corinthe", "Canal du Midi"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Le Canal de Suez traverse l'Égypte"
+      },
+      {
+        "id": 106,
+        "question": "Quel pays a Nairobi comme capitale ?",
+        "choices": ["Tanzanie", "Kenya", "Ouganda", "Rwanda"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Nairobi est la capitale du Kenya"
+      },
+      {
+        "id": 107,
+        "question": "Quelle pyramide se trouve en Égypte ?",
+        "choices": ["Pyramide du Soleil", "Pyramide de Khéops", "Pyramide Maya", "Pyramide Aztèque"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "La pyramide de Khéops à Gizeh"
+      },
+      {
+        "id": 108,
+        "question": "Quel désert se trouve au sud de l'Afrique ?",
+        "choices": ["Sahara", "Gobi", "Kalahari", "Atacama"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Le désert du Kalahari couvre le Botswana"
+      },
+      {
+        "id": 109,
+        "question": "Quel fleuve traverse l'Afrique de l'Ouest ?",
+        "choices": ["Nil", "Congo", "Niger", "Zambèze"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Le fleuve Niger traverse plusieurs pays d'Afrique de l'Ouest"
+      },
+      {
+        "id": 110,
+        "question": "Quelle est la capitale du Ghana ?",
+        "choices": ["Lagos", "Accra", "Lomé", "Abidjan"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Accra est la capitale ghanéenne"
+      },
+      {
+        "id": 111,
+        "question": "Quel pays africain a trois capitales ?",
+        "choices": ["Nigeria", "Afrique du Sud", "Kenya", "Tanzanie"],
+        "correct": 1,
+        "difficulty": 3,
+        "explanation": "L'Afrique du Sud a Pretoria (exec.), Le Cap (légis.), Bloemfontein (judic.)"
+      },
+      {
+        "id": 112,
+        "question": "Quel golfe borde le Nigeria ?",
+        "choices": ["Golfe de Guinée", "Golfe d'Aden", "Golfe Persique", "Golfe du Mexique"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "Le Golfe de Guinée borde l'Afrique de l'Ouest"
+      },
+      {
+        "id": 113,
+        "question": "Quelle ville égyptienne est célèbre pour ses temples antiques ?",
+        "choices": ["Le Caire", "Alexandrie", "Louxor", "Port-Saïd"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Louxor abrite les temples de Karnak et Louxor"
+      },
+      {
+        "id": 114,
+        "question": "Quel pays est surnommé 'le pays des mille collines' ?",
+        "choices": ["Rwanda", "Burundi", "Ouganda", "Kenya"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "Le Rwanda est appelé 'le pays des mille collines'"
+      },
+      {
+        "id": 115,
+        "question": "Quelle forêt tropicale se trouve au centre de l'Afrique ?",
+        "choices": ["Amazonie", "Forêt du Congo", "Taïga", "Forêt boréale"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "La forêt du Congo est la 2e plus grande forêt tropicale"
+      },
+      {
+        "id": 116,
+        "question": "Quel est le point le plus au nord de l'Afrique ?",
+        "choices": ["Cap Vert", "Cap Blanc", "Cap Bon", "Cap Spartel"],
+        "correct": 1,
+        "difficulty": 3,
+        "explanation": "Le Cap Blanc en Tunisie est le point le plus septentrional"
+      },
+      {
+        "id": 117,
+        "question": "Quelle ville est la capitale économique du Maroc ?",
+        "choices": ["Rabat", "Casablanca", "Marrakech", "Fès"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Casablanca est le centre économique marocain"
+      },
+      {
+        "id": 118,
+        "question": "Quel pays africain est enclavé dans l'Afrique du Sud ?",
+        "choices": ["Swaziland", "Lesotho", "Botswana", "Zimbabwe"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Le Lesotho est entièrement entouré par l'Afrique du Sud"
+      },
+      {
+        "id": 119,
+        "question": "Quelle mer borde l'Afrique du Nord ?",
+        "choices": ["Mer Rouge", "Mer Noire", "Mer Méditerranée", "Mer Caspienne"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "La Méditerranée borde toute l'Afrique du Nord"
+      },
+      {
+        "id": 120,
+        "question": "Quel festival de musique est célèbre au Mali ?",
+        "choices": ["Coachella", "Festival du Désert", "Glastonbury", "Tomorrowland"],
+        "correct": 1,
+        "difficulty": 3,
+        "explanation": "Le Festival du Désert (Festival au Désert) se tenait à Tombouctou"
+      }
+    ],
+    "culture_generale": [
+      {
+        "id": 121,
+        "question": "Qui a peint la Joconde ?",
+        "choices": ["Michel-Ange", "Léonard de Vinci", "Raphaël", "Donatello"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Léonard de Vinci a peint La Joconde au 16ème siècle"
+      },
+      {
+        "id": 122,
+        "question": "Combien y a-t-il de continents ?",
+        "choices": ["5", "6", "7", "8"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Il y a 7 continents : Afrique, Amérique du Nord, Amérique du Sud, Antarctique, Asie, Europe, Océanie"
+      },
+      {
+        "id": 123,
+        "question": "Quelle est la capitale de la France ?",
+        "choices": ["Lyon", "Marseille", "Paris", "Bordeaux"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Paris est la capitale de la France"
+      },
+      {
+        "id": 124,
+        "question": "Qui a écrit 'Les Misérables' ?",
+        "choices": ["Balzac", "Zola", "Victor Hugo", "Flaubert"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Victor Hugo a écrit Les Misérables en 1862"
+      },
+      {
+        "id": 125,
+        "question": "Combien de joueurs dans une équipe de football ?",
+        "choices": ["9", "10", "11", "12"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Une équipe de football compte 11 joueurs sur le terrain"
+      },
+      {
+        "id": 126,
+        "question": "Quelle planète est la plus proche du Soleil ?",
+        "choices": ["Vénus", "Mercure", "Mars", "Terre"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Mercure est la planète la plus proche du Soleil"
+      },
+      {
+        "id": 127,
+        "question": "En quelle année a eu lieu la Révolution française ?",
+        "choices": ["1789", "1799", "1805", "1815"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "La Révolution française a débuté en 1789"
+      },
+      {
+        "id": 128,
+        "question": "Qui a découvert l'Amérique ?",
+        "choices": ["Magellan", "Christophe Colomb", "Vasco de Gama", "Marco Polo"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Christophe Colomb a découvert l'Amérique en 1492"
+      },
+      {
+        "id": 129,
+        "question": "Combien de notes dans une gamme majeure ?",
+        "choices": ["5", "7", "8", "12"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Une gamme majeure comporte 7 notes différentes"
+      },
+      {
+        "id": 130,
+        "question": "Quelle est la langue la plus parlée au monde ?",
+        "choices": ["Anglais", "Mandarin", "Espagnol", "Hindi"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Le mandarin est la langue maternelle la plus parlée"
+      },
+      {
+        "id": 131,
+        "question": "Qui a inventé l'ampoule électrique ?",
+        "choices": ["Nikola Tesla", "Thomas Edison", "Alexander Bell", "Benjamin Franklin"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Thomas Edison a commercialisé l'ampoule électrique"
+      },
+      {
+        "id": 132,
+        "question": "Combien de côtés a un pentagone ?",
+        "choices": ["4", "5", "6", "7"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Un pentagone a 5 côtés"
+      },
+      {
+        "id": 133,
+        "question": "Quelle est la capitale du Japon ?",
+        "choices": ["Kyoto", "Osaka", "Tokyo", "Hiroshima"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Tokyo est la capitale du Japon"
+      },
+      {
+        "id": 134,
+        "question": "Qui a composé la 9ème symphonie ?",
+        "choices": ["Mozart", "Beethoven", "Bach", "Vivaldi"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Ludwig van Beethoven a composé la 9ème symphonie"
+      },
+      {
+        "id": 135,
+        "question": "Quel est l'océan le plus grand ?",
+        "choices": ["Atlantique", "Indien", "Pacifique", "Arctique"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "L'océan Pacifique est le plus vaste"
+      },
+      {
+        "id": 136,
+        "question": "Combien de couleurs dans un arc-en-ciel ?",
+        "choices": ["5", "6", "7", "8"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Un arc-en-ciel a 7 couleurs principales"
+      },
+      {
+        "id": 137,
+        "question": "Qui a écrit 'Roméo et Juliette' ?",
+        "choices": ["Molière", "Shakespeare", "Racine", "Corneille"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "William Shakespeare a écrit Roméo et Juliette"
+      },
+      {
+        "id": 138,
+        "question": "Quelle est la vitesse de la lumière ?",
+        "choices": ["200 000 km/s", "300 000 km/s", "400 000 km/s", "500 000 km/s"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "La lumière voyage à environ 300 000 km/s dans le vide"
+      },
+      {
+        "id": 139,
+        "question": "Combien de dents a un adulte ?",
+        "choices": ["28", "30", "32", "34"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Un adulte a normalement 32 dents (avec dents de sagesse)"
+      },
+      {
+        "id": 140,
+        "question": "Quelle ville accueille le siège de l'ONU ?",
+        "choices": ["Genève", "Paris", "New York", "Bruxelles"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Le siège de l'ONU est à New York"
+      },
+      {
+        "id": 141,
+        "question": "Qui a peint 'La Nuit étoilée' ?",
+        "choices": ["Picasso", "Van Gogh", "Monet", "Renoir"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Vincent van Gogh a peint La Nuit étoilée en 1889"
+      },
+      {
+        "id": 142,
+        "question": "Combien de pattes a une araignée ?",
+        "choices": ["6", "8", "10", "12"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Les araignées ont 8 pattes"
+      },
+      {
+        "id": 143,
+        "question": "Quelle est la capitale de l'Italie ?",
+        "choices": ["Milan", "Venise", "Rome", "Florence"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Rome est la capitale italienne"
+      },
+      {
+        "id": 144,
+        "question": "Qui a inventé le téléphone ?",
+        "choices": ["Edison", "Bell", "Tesla", "Morse"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Alexander Graham Bell a breveté le téléphone"
+      },
+      {
+        "id": 145,
+        "question": "Combien de secondes dans une heure ?",
+        "choices": ["3000", "3200", "3400", "3600"],
+        "correct": 3,
+        "difficulty": 2,
+        "explanation": "1 heure = 60 minutes × 60 secondes = 3600 secondes"
+      },
+      {
+        "id": 146,
+        "question": "Quelle planète est surnommée la planète rouge ?",
+        "choices": ["Vénus", "Mars", "Jupiter", "Saturne"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Mars est appelée la planète rouge"
+      },
+      {
+        "id": 147,
+        "question": "Qui a écrit '1984' ?",
+        "choices": ["Aldous Huxley", "George Orwell", "Ray Bradbury", "Isaac Asimov"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "George Orwell a écrit 1984"
+      },
+      {
+        "id": 148,
+        "question": "Combien de touches sur un piano ?",
+        "choices": ["76", "88", "96", "104"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Un piano standard a 88 touches"
+      },
+      {
+        "id": 149,
+        "question": "Quelle est la capitale de l'Espagne ?",
+        "choices": ["Barcelone", "Madrid", "Séville", "Valence"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "Madrid est la capitale espagnole"
+      },
+      {
+        "id": 150,
+        "question": "Qui a formulé la théorie de la relativité ?",
+        "choices": ["Newton", "Einstein", "Galilée", "Hawking"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Albert Einstein a développé la théorie de la relativité"
+      },
+      {
+        "id": 151,
+        "question": "Combien de jours dans une année bissextile ?",
+        "choices": ["364", "365", "366", "367"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "Une année bissextile compte 366 jours"
+      },
+      {
+        "id": 152,
+        "question": "Quelle est la plus haute montagne du monde ?",
+        "choices": ["K2", "Mont Blanc", "Everest", "Kilimandjaro"],
+        "correct": 2,
+        "difficulty": 1,
+        "explanation": "L'Everest (8848 m) est le plus haut sommet"
+      },
+      {
+        "id": 153,
+        "question": "Qui a sculpté 'David' ?",
+        "choices": ["Rodin", "Michel-Ange", "Donatello", "Bernini"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Michel-Ange a sculpté le David"
+      },
+      {
+        "id": 154,
+        "question": "Combien de valves a le cœur humain ?",
+        "choices": ["2", "3", "4", "5"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Le cœur humain a 4 valves"
+      },
+      {
+        "id": 155,
+        "question": "Quelle est la capitale du Canada ?",
+        "choices": ["Toronto", "Montréal", "Vancouver", "Ottawa"],
+        "correct": 3,
+        "difficulty": 2,
+        "explanation": "Ottawa est la capitale canadienne"
+      },
+      {
+        "id": 156,
+        "question": "Qui a écrit 'L'Odyssée' ?",
+        "choices": ["Virgile", "Homère", "Sophocle", "Euripide"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Homère est l'auteur de L'Odyssée"
+      },
+      {
+        "id": 157,
+        "question": "Combien de chromosomes a l'être humain ?",
+        "choices": ["23", "42", "46", "48"],
+        "correct": 2,
+        "difficulty": 3,
+        "explanation": "L'humain possède 46 chromosomes (23 paires)"
+      },
+      {
+        "id": 158,
+        "question": "Quelle est la formule chimique de l'eau ?",
+        "choices": ["H2O", "CO2", "O2", "H2O2"],
+        "correct": 0,
+        "difficulty": 1,
+        "explanation": "L'eau a pour formule H2O"
+      },
+      {
+        "id": 159,
+        "question": "Qui a écrit 'Le Petit Prince' ?",
+        "choices": ["Jules Verne", "Antoine de Saint-Exupéry", "Albert Camus", "Marcel Proust"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Saint-Exupéry a écrit Le Petit Prince"
+      },
+      {
+        "id": 160,
+        "question": "Combien de merveilles du monde antique ?",
+        "choices": ["5", "7", "9", "10"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Il y avait 7 merveilles du monde antique"
+      }
+    ],
+    "python": [
+      {
+        "id": 161,
+        "question": "Quel mot-clé définit une fonction en Python ?",
+        "choices": ["function", "def", "func", "define"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "'def' est utilisé pour définir une fonction en Python"
+      },
+      {
+        "id": 162,
+        "question": "Quel est le type de données de [1, 2, 3] ?",
+        "choices": ["tuple", "list", "dict", "set"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "[1, 2, 3] est une liste (list)"
+      },
+      {
+        "id": 163,
+        "question": "Comment afficher 'Hello' en Python ?",
+        "choices": ["echo('Hello')", "print('Hello')", "console.log('Hello')", "printf('Hello')"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "print() est la fonction d'affichage en Python"
+      },
+      {
+        "id": 164,
+        "question": "Quel symbole crée un commentaire en Python ?",
+        "choices": ["//", "#", "/*", "--"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "# est utilisé pour les commentaires en Python"
+      },
+      {
+        "id": 165,
+        "question": "Quel est le résultat de 5 // 2 en Python ?",
+        "choices": ["2", "2.5", "3", "Erreur"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "// est la division entière : 5 // 2 = 2"
+      },
+      {
+        "id": 166,
+        "question": "Comment créer une liste vide ?",
+        "choices": ["[]", "{}", "()", "list()"],
+        "correct": 0,
+        "difficulty": 1,
+        "explanation": "[] crée une liste vide (list() fonctionne aussi)"
+      },
+      {
+        "id": 167,
+        "question": "Quel mot-clé importe un module ?",
+        "choices": ["include", "import", "require", "using"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "'import' permet d'importer des modules"
+      },
+      {
+        "id": 168,
+        "question": "Quel est le type de données de True ?",
+        "choices": ["boolean", "bool", "int", "str"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "True est de type bool (booléen)"
+      },
+      {
+        "id": 169,
+        "question": "Comment obtenir la longueur d'une liste ?",
+        "choices": ["length()", "len()", "size()", "count()"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "len() retourne la longueur d'une séquence"
+      },
+      {
+        "id": 170,
+        "question": "Quel opérateur teste l'égalité ?",
+        "choices": ["=", "==", "===", "equals"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "== teste l'égalité entre deux valeurs"
+      },
+      {
+        "id": 171,
+        "question": "Comment convertir une chaîne en entier ?",
+        "choices": ["int()", "integer()", "toInt()", "parse()"],
+        "correct": 0,
+        "difficulty": 1,
+        "explanation": "int() convertit une valeur en entier"
+      },
+      {
+        "id": 172,
+        "question": "Quel est le résultat de 2 ** 3 ?",
+        "choices": ["5", "6", "8", "9"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "** est l'opérateur puissance : 2³ = 8"
+      },
+      {
+        "id": 173,
+        "question": "Comment créer un dictionnaire vide ?",
+        "choices": ["[]", "{}", "()", "dict()"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "{} crée un dictionnaire vide (dict() fonctionne aussi)"
+      },
+      {
+        "id": 174,
+        "question": "Quel mot-clé boucle sur une séquence ?",
+        "choices": ["while", "for", "foreach", "loop"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "'for' permet d'itérer sur une séquence"
+      },
+      {
+        "id": 175,
+        "question": "Comment ajouter un élément à une liste ?",
+        "choices": ["add()", "append()", "push()", "insert()"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "append() ajoute un élément à la fin d'une liste"
+      },
+      {
+        "id": 176,
+        "question": "Quel est le résultat de 'Hi' * 3 ?",
+        "choices": ["'Hi3'", "'HiHiHi'", "Erreur", "'Hi * 3'"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "* répète une chaîne : 'Hi' * 3 = 'HiHiHi'"
+      },
+      {
+        "id": 177,
+        "question": "Comment ouvrir un fichier en lecture ?",
+        "choices": ["open('f', 'r')", "read('f')", "file('f')", "load('f')"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "open('fichier', 'r') ouvre un fichier en lecture"
+      },
+      {
+        "id": 178,
+        "question": "Quel mot-clé gère les exceptions ?",
+        "choices": ["catch", "try", "except", "handle"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "'try' commence un bloc de gestion d'exceptions"
+      },
+      {
+        "id": 179,
+        "question": "Comment créer une classe ?",
+        "choices": ["class Nom:", "def Nom:", "type Nom:", "struct Nom:"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "'class NomClasse:' définit une classe"
+      },
+      {
+        "id": 180,
+        "question": "Quel est le type de données de (1, 2) ?",
+        "choices": ["list", "tuple", "array", "set"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "(1, 2) est un tuple (immuable)"
+      },
+      {
+        "id": 181,
+        "question": "Comment supprimer un élément d'une liste ?",
+        "choices": ["delete()", "remove()", "pop()", "Toutes ces réponses"],
+        "correct": 3,
+        "difficulty": 2,
+        "explanation": "remove(), pop() et del peuvent supprimer des éléments"
+      },
+      {
+        "id": 182,
+        "question": "Quel est le résultat de bool([]) ?",
+        "choices": ["True", "False", "None", "Erreur"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Une liste vide est considérée comme False"
+      },
+      {
+        "id": 183,
+        "question": "Comment obtenir une sous-chaîne ?",
+        "choices": ["substring()", "slice()", "[début:fin]", "substr()"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "Le slicing [début:fin] extrait une sous-chaîne"
+      },
+      {
+        "id": 184,
+        "question": "Quel mot-clé arrête une fonction ?",
+        "choices": ["break", "return", "exit", "stop"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "'return' termine une fonction et renvoie une valeur"
+      },
+      {
+        "id": 185,
+        "question": "Comment trier une liste ?",
+        "choices": ["list.sort()", "sort(list)", "list.order()", "order(list)"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "list.sort() trie une liste sur place"
+      },
+      {
+        "id": 186,
+        "question": "Quel est le résultat de 10 % 3 ?",
+        "choices": ["0", "1", "3", "3.33"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "% est le modulo (reste) : 10 % 3 = 1"
+      },
+      {
+        "id": 187,
+        "question": "Comment créer une compréhension de liste ?",
+        "choices": ["[x for x in range(5)]", "{x for x in range(5)}", "(x for x in range(5))", "for x in range(5): x"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "[expression for item in iterable] est une list comprehension"
+      },
+      {
+        "id": 188,
+        "question": "Quel module permet le calcul scientifique ?",
+        "choices": ["math", "numpy", "scipy", "Tous ces modules"],
+        "correct": 3,
+        "difficulty": 2,
+        "explanation": "math, numpy et scipy offrent des fonctions scientifiques"
+      },
+      {
+        "id": 189,
+        "question": "Comment vérifier le type d'une variable ?",
+        "choices": ["typeof()", "type()", "gettype()", "instanceof()"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "type() retourne le type d'un objet"
+      },
+      {
+        "id": 190,
+        "question": "Quel est le résultat de 'a' in 'abc' ?",
+        "choices": ["True", "False", "1", "Erreur"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "'in' teste l'appartenance : 'a' est dans 'abc'"
+      },
+      {
+        "id": 191,
+        "question": "Comment inverser une liste ?",
+        "choices": ["list.reverse()", "reverse(list)", "list.flip()", "list[::-1]"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "list.reverse() inverse sur place (list[::-1] crée une copie inversée)"
+      },
+      {
+        "id": 192,
+        "question": "Quel mot-clé définit une variable globale ?",
+        "choices": ["global", "var", "public", "extern"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "'global' déclare une variable globale dans une fonction"
+      },
+      {
+        "id": 193,
+        "question": "Comment joindre des éléments de liste en chaîne ?",
+        "choices": ["join(list)", "' '.join(list)", "concat(list)", "list.join(' ')"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "séparateur.join(liste) joint les éléments"
+      },
+      {
+        "id": 194,
+        "question": "Quel est le résultat de not True ?",
+        "choices": ["True", "False", "None", "1"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "'not' inverse un booléen : not True = False"
+      },
+      {
+        "id": 195,
+        "question": "Comment obtenir les clés d'un dictionnaire ?",
+        "choices": ["dict.keys()", "keys(dict)", "dict.getKeys()", "getkeys(dict)"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "dict.keys() retourne les clés du dictionnaire"
+      },
+      {
+        "id": 196,
+        "question": "Quel opérateur effectue une division flottante ?",
+        "choices": ["//", "/", "div", "%"],
+        "correct": 1,
+        "difficulty": 1,
+        "explanation": "/ effectue une division flottante en Python 3"
+      },
+      {
+        "id": 197,
+        "question": "Comment définir une fonction lambda ?",
+        "choices": ["lambda x: x*2", "def lambda x: x*2", "fn x: x*2", "=> x: x*2"],
+        "correct": 0,
+        "difficulty": 2,
+        "explanation": "lambda args: expression définit une fonction anonyme"
+      },
+      {
+        "id": 198,
+        "question": "Quel module gère les expressions régulières ?",
+        "choices": ["regex", "re", "regexp", "pattern"],
+        "correct": 1,
+        "difficulty": 2,
+        "explanation": "Le module 're' gère les regex en Python"
+      },
+      {
+        "id": 199,
+        "question": "Comment créer un ensemble (set) ?",
+        "choices": ["{1, 2, 3}", "set([1, 2, 3])", "Les deux", "Aucune"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "{1,2,3} et set([1,2,3]) créent tous deux un ensemble"
+      },
+      {
+        "id": 200,
+        "question": "Quel est le résultat de range(3) ?",
+        "choices": ["[0, 1, 2]", "[1, 2, 3]", "range(0, 3)", "0, 1, 2"],
+        "correct": 2,
+        "difficulty": 2,
+        "explanation": "range(3) retourne un objet range, pas une liste"
+      }
+    ]
+  }

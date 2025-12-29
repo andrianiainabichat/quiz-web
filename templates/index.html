@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master - Accueil</title>
+    <link rel="manifest" href="/static/manifest.json">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-brain me-2"></i>Quiz Master
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/"><i class="fas fa-home me-1"></i>Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/scores"><i class="fas fa-trophy me-1"></i>Scores</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center py-5">
+            <h1 class="display-4 fw-bold mb-3 animate-fade-in">
+                <i class="fas fa-graduation-cap text-warning"></i>
+                Bienvenue sur Quiz Master
+            </h1>
+            <p class="lead mb-4 animate-fade-in-delay">
+                Testez vos connaissances dans diverses catégories !
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Mode Selection -->
+        <div class="card shadow-sm mb-4 animate-slide-up">
+            <div class="card-body">
+                <h3 class="card-title mb-4">
+                    <i class="fas fa-gamepad text-primary me-2"></i>Choisir le mode de jeu
+                </h3>
+                <div class="row g-3">
+                    <!-- Mode Solo -->
+                    <div class="col-md-4">
+                        <div class="mode-card" data-mode="solo">
+                            <div class="mode-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h5>Solo</h5>
+                            <p class="text-muted small">Mode classique, 3 vies</p>
+                            <div class="mode-badge">Normal</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mode Hardcore -->
+                    <div class="col-md-4">
+                        <div class="mode-card" data-mode="hardcore">
+                            <div class="mode-icon text-danger">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h5>Hardcore</h5>
+                            <p class="text-muted small">1 vie, points x2</p>
+                            <div class="mode-badge bg-danger">Difficile</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mode Multijoueur -->
+                    <div class="col-md-4">
+                        <a href="/multiplayer" class="text-decoration-none">
+                            <div class="mode-card mode-card-multi">
+                                <div class="mode-icon text-success">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h5>Multijoueur</h5>
+                                <p class="text-muted small">Affrontez vos amis !</p>
+                                <div class="mode-badge bg-success">
+                                    <i class="fas fa-bolt me-1"></i>En ligne
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Selection (pour les modes solo/hardcore) -->
+        <div class="card shadow-sm mb-4 animate-slide-up-delay" id="categorySection">
+            <div class="card-body">
+                <h3 class="card-title mb-4">
+                    <i class="fas fa-th-large text-success me-2"></i>Choisir une catégorie
+                </h3>
+                <div class="row g-3" id="categoriesContainer">
+                    <!-- Les catégories seront chargées dynamiquement -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Scores Preview -->
+        <div class="card shadow-sm animate-slide-up-delay-2">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-trophy text-warning me-2"></i>Meilleurs Scores
+                    </h3>
+                    <a href="/scores" class="btn btn-outline-primary btn-sm">
+                        Voir tout <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+                <div id="topScoresPreview">
+                    <!-- Top 3 scores chargés dynamiquement -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="row mt-5 g-4">
+            <div class="col-md-4">
+                <div class="feature-card text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-brain fa-3x text-primary"></i>
+                    </div>
+                    <h4>200+ Questions</h4>
+                    <p class="text-muted">Un large choix de questions dans 5 catégories différentes</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-users fa-3x text-success"></i>
+                    </div>
+                    <h4>Mode Multijoueur</h4>
+                    <p class="text-muted">Défiez vos amis en temps réel jusqu'à 8 joueurs</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-chart-line fa-3x text-warning"></i>
+                    </div>
+                    <h4>Statistiques</h4>
+                    <p class="text-muted">Suivez votre progression et battez vos records</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">
+                <i class="fas fa-code me-2"></i>Quiz Master © 2024
+            </p>
+            <p class="small text-muted mb-2">
+                Développé avec <i class="fas fa-heart text-danger"></i> en Python Flask
+            </p>
+            <div class="mt-3">
+                <a href="/" class="text-light me-3"><i class="fas fa-home"></i></a>
+                <a href="/scores" class="text-light me-3"><i class="fas fa-trophy"></i></a>
+                <a href="/multiplayer" class="text-light"><i class="fas fa-users"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Variables globales
+        let selectedMode = 'solo';
+        let selectedCategory = null;
+        let categories = {};
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCategories();
+            loadTopScores();
+            initThemeToggle();
+            initModeSelection();
+            
+            // Animation au survol de la carte multijoueur
+            const multiCard = document.querySelector('.mode-card-multi');
+            if (multiCard) {
+                multiCard.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.05)';
+                });
+                multiCard.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            }
+        });
+
+        // Charger les catégories
+        async function loadCategories() {
+            try {
+                const response = await fetch('/api/categories');
+                categories = await response.json();
+                displayCategories();
+            } catch (error) {
+                console.error('Erreur chargement catégories:', error);
+            }
+        }
+
+        // Afficher les catégories
+        function displayCategories() {
+            const container = document.getElementById('categoriesContainer');
+            container.innerHTML = '';
+
+            Object.keys(categories).forEach(key => {
+                const cat = categories[key];
+                const card = document.createElement('div');
+                card.className = 'col-md-4 col-lg-3';
+                card.innerHTML = `
+                    <div class="category-card" data-category="${key}">
+                        <div class="category-icon">${cat.icon}</div>
+                        <h5 class="mt-3">${cat.name}</h5>
+                        <p class="text-muted small">${cat.description}</p>
+                        <div class="badge bg-primary">${cat.count} questions</div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            // Événements click sur les cartes
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    selectedCategory = this.dataset.category;
+                    document.querySelectorAll('.category-card').forEach(c => c.classList.remove('selected'));
+                    this.classList.add('selected');
+                    startQuiz();
+                });
+            });
+        }
+
+        // Sélection du mode
+        function initModeSelection() {
+            document.querySelectorAll('.mode-card:not(.mode-card-multi)').forEach(card => {
+                card.addEventListener('click', function() {
+                    const mode = this.dataset.mode;
+                    
+                    if (!mode) return; // Pour la carte multijoueur
+                    
+                    selectedMode = mode;
+                    
+                    // Désélectionner toutes les cartes
+                    document.querySelectorAll('.mode-card:not(.mode-card-multi)').forEach(c => {
+                        c.classList.remove('selected');
+                    });
+                    
+                    // Sélectionner la carte cliquée
+                    this.classList.add('selected');
+                    
+                    // Afficher la section des catégories
+                    document.getElementById('categorySection').scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+
+            // Sélectionner solo par défaut
+            const soloCard = document.querySelector('[data-mode="solo"]');
+            if (soloCard) {
+                soloCard.classList.add('selected');
+            }
+        }
+
+        // Démarrer le quiz
+        function startQuiz() {
+            if (!selectedCategory) {
+                alert('Veuillez sélectionner une catégorie');
+                return;
+            }
+            
+            // Demander le nom du joueur
+            const playerName = prompt('Votre nom ?', localStorage.getItem('playerName') || 'Anonyme');
+            if (!playerName) return;
+            
+            // Sauvegarder dans localStorage
+            localStorage.setItem('quizMode', selectedMode);
+            localStorage.setItem('quizCategory', selectedCategory);
+            localStorage.setItem('playerName', playerName);
+            
+            // Rediriger vers la page de quiz
+            window.location.href = '/quiz';
+        }
+
+        // Charger top scores
+        function loadTopScores() {
+            const scores = JSON.parse(localStorage.getItem('quizScores') || '[]');
+            scores.sort((a, b) => b.score - a.score);
+            const top3 = scores.slice(0, 3);
+
+            const container = document.getElementById('topScoresPreview');
+            if (top3.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-4">
+                        <i class="fas fa-trophy fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">Aucun score enregistré</p>
+                        <p class="small text-muted">Soyez le premier à jouer !</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const medals = ['🥇', '🥈', '🥉'];
+            const rankColors = ['gold', 'silver', 'bronze'];
+
+            container.innerHTML = top3.map((score, index) => `
+                <div class="score-item score-item-${rankColors[index]} d-flex justify-content-between align-items-center mb-3 p-3 rounded">
+                    <div class="d-flex align-items-center">
+                        <div class="score-rank-display me-3">${medals[index]}</div>
+                        <div>
+                            <strong class="d-block">${score.playerName}</strong>
+                            <small class="text-muted">
+                                ${categories[score.category]?.name || score.category}
+                                ${score.mode === 'hardcore' ? '<span class="badge bg-danger ms-1">Hardcore</span>' : ''}
+                            </small>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <div class="fw-bold text-primary fs-4">${score.score}</div>
+                        <small class="text-muted">${score.correctAnswers}/${score.totalQuestions}</small>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Gestion du thème
+        function initThemeToggle() {
+            const themeToggle = document.getElementById('themeToggle');
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            
+            if (currentTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                this.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            });
+        }
+    </script>
+
+    <style>
+        /* Styles additionnels pour l'index */
+        .mode-card-multi {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mode-card-multi::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(16, 185, 129, 0.1) 50%,
+                transparent 70%
+            );
+            animation: shimmer-multi 3s infinite;
+        }
+
+        @keyframes shimmer-multi {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .dark-mode .feature-card {
+            background: var(--dark-card);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .feature-card:hover .feature-icon {
+            animation: bounce 1s ease-in-out;
+        }
+
+        .score-item {
+            background: white;
+            transition: all 0.3s ease;
+            border-left: 4px solid #e5e7eb;
+        }
+
+        .dark-mode .score-item {
+            background: var(--dark-card);
+        }
+
+        .score-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .score-item-gold {
+            border-left-color: #fbbf24;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+
+        .dark-mode .score-item-gold {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(251, 191, 36, 0.1) 100%);
+        }
+
+        .score-item-silver {
+            border-left-color: #9ca3af;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+
+        .dark-mode .score-item-silver {
+            background: linear-gradient(135deg, rgba(156, 163, 175, 0.2) 0%, rgba(156, 163, 175, 0.1) 100%);
+        }
+
+        .score-item-bronze {
+            border-left-color: #f97316;
+            background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+        }
+
+        .dark-mode .score-item-bronze {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0.1) 100%);
+        }
+
+        .score-rank-display {
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Animation pour le lien multijoueur */
+        a.text-decoration-none:hover .mode-card-multi {
+            border-color: var(--success-color);
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Footer links */
+        footer a {
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+    </style>
+</body>
+</html>
